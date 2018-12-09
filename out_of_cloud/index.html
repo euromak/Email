@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Out of cloud</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		@font-face {
+		    font-family: 'Quiza Pro';
+		    src: local('Quiza Pro Regular'), local('QuizaPro-Regular'), url('font/Quizaproregular.woff2') format('woff2'), url('Quizaproregular.woff') format('woff'), url('Quizaproregular.ttf') format('truetype');
+		    font-weight: 400;
+		    font-style: normal;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #f0f0f0;
+			font-family: Quiza Pro;
+		}
+		a {
+			text-decoration: none;
+		}
+		header {
+			width: 600px;
+			margin: 0 auto;
+		}
+		.text {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			font-size: 12px;
+			color: #7a7d84;
+			margin: 20px auto 0;
+		}
+		.text a {
+			color: #7a7d84;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			width: 600px;
+			height: 3670px;
+			background: #ffffff;
+			margin: 20px auto;
+			box-shadow: 0 0 40px rgb(0,0,0,0.5);
+		}
+		.phone {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 36%;
+			height: 60px;
+			margin: 0 auto;
+			background: #f0f0f0;
+			font-family: Quiza Pro;
+			border-radius: 0 0 30px 30px;
+		}
+		.phone p:first-child {
+			margin-top: 10px;
+			font-size: 22px;
+		}
+		.phone p:last-child {
+
+			font-size: 12px;
+		}
+		.logo {
+			display: flex;
+			justify-content: center;
+			margin-top: 25px;
+		}
+		.nav {
+			display: flex;
+			justify-content: center;
+			margin-top: 15px;
+			font-weight: bold;
+		}
+		.nav div {
+			margin: 0 10px;
+		}
+		.nav a {
+			color: #e11538;
+		}
+		.banner {
+			display: flex;
+			justify-content: center;
+			background-image: url(images/banner.jpg);
+			width: 539px;
+			height: 359px;
+			margin: 20px auto; 
+		}
+		.banner a {
+			width: 100%;
+			height: 100%;
+		}
+		.main-text {
+			margin: 0 30px;
+		}
+		.main-text p {
+			margin-top: 15px;
+			line-height: 1.5em;
+
+		}
+		.red-text {
+			color: #e11538;
+			border-bottom: 1px solid #e11538;
+		}
+		.conditions {
+			margin-top: 45px;
+			padding: 0 30px;
+			background: #f9f9f9;
+
+		}
+		.conditions h1 {
+			margin-top: 30px;
+			color: #e11538;
+			text-align: center;
+		}
+		.conditions p {
+			margin-top: 10px;
+			line-height: 1.5em;
+		}
+		.icons {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			margin-top: 30px;
+		}
+		.icon {
+			flex: 1;
+		}
+		.img-set {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+		.arrow {
+			position: absolute;
+			right: 0;
+		}
+		.button {
+			display: flex;
+			justify-content: center;
+		}
+		#btn:hover {
+			background: #f9f9f9;
+			color: #e01537;
+			transition: background 800ms;
+			border: 3px solid #e01537;
+			font-weight: bold;
+		}
+		#btn {
+			background: #e01537;
+			color: white;
+			width: 270px;
+			height: 40px;
+			margin: 30px auto;
+			border: none;
+			cursor: pointer;
+			font-size: 0.9em;
+			transition: all 800ms;
+			font-weight: bold;
+
+		}
+		.text-grid {
+			display: flex;
+			flex-direction: column;
+			margin: 30px;
+		}
+		.text-grid h1 {
+			color: #e11538;
+			text-align: center;
+		}
+		.text-grid p {
+			margin-top: 30px;
+			line-height: 1.5em;
+		}
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 30px; 
+		}
+		.grid div {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 33%;
+			justify-content: center;
+			align-items: center;
+			margin-top: 40px;
+		}
+		.grid p {
+			margin: 3px 0;
+		}
+		.grid button {
+			width: 100px;
+			height: 30px;
+			background: #e01537;
+			color: white;
+			cursor: pointer;
+			border: none;
+			margin-top: 10px;
+		}
+		.grid button a {
+			color: white;
+		}
+		.grid button:hover {
+			background: white;
+			color: #e01537;
+			transition: background 800ms;
+			border: 3px solid #e01537;
+			font-weight: bold;	
+		}
+		.grid a {
+			color: #e11538;
+		}
+		.grid h4 {
+			margin: 40px 0 60px;
+		}
+		.underline {
+			border-bottom: 1px solid black;
+		}
+		.categorys {
+			margin: 0 30px; 
+		}
+		.box p{
+			line-height: 1.3em;
+			margin: 0 0 20px 20px; 
+		}
+		.categorys h1 {
+			font-size: 2.4em;
+			margin: 30px 0 10px 20px;
+		}
+		.categorys button {
+			width: 170px;
+			height: 40px;
+			background: white;
+			border: none;
+			cursor: pointer;
+			margin: 20px 0 0 20px;
+
+		}
+		.box a {
+			color: white;
+		}
+		.box1 button {
+			color: #7b6a64;
+		}
+		.box2 button {
+			color: #257179;
+		}
+		.box3 button {
+			margin: 0 0 0 20px;
+			color: #6d4089;
+		}				
+		.box1 {
+			display: flex;
+			flex-direction: column;
+			color: white;
+			background: url(images/01.jpg);
+			width: 540px;
+			height: 210px;
+			margin-top: 10px;
+		}
+		.box2 {
+			display: flex;
+			flex-direction: column;
+			color: white;
+			background: url(images/02.jpg);
+			width: 540px;
+			height: 210px;
+			margin-top: 10px;
+		}
+		.box3 {
+			display: flex;
+			flex-direction: column;
+			color: white;
+			background: url(images/03.jpg);
+			width: 540px;
+			height: 210px;
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}					
+		footer {
+			width: 600px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		footer h3 {
+			color: #3e3b3b;
+		}
+		footer p {
+			color: #7a7d84;
+			font-size: 12px;
+			margin-bottom: 30px;
+		}
+		.social {
+			display: flex;
+			justify-content: center;
+		}
+		.social div {
+			margin: 16px 0 ;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="text">
+			Письмо отображается неверно? <a href=""><u>Откройте его в браузере</u></a> 
+		</div>
+	</header>
+	<section class="container">
+		<div class="phone">
+			<p>8(800) 700-62-13</p>
+			<p>Бесплатный звонок по России</p>
+		</div>
+		<div class="logo">
+			<a href="http://lady-xl.ru"><img src="images/logo.jpg" alt="бутик полной моды"></a>
+		</div>
+		<div class="nav">
+			<div><a href="http://lady-xl.ru/category_22.html">Платья</a></div>
+			<div><a href="http://lady-xl.ru/category_21.html">Блузки</a></div>
+			<div><a href="http://lady-xl.ru/new_products.html">Новинки</a></div>
+			<div><a href="http://lady-xl.ru/sale.html">Распродажа</a></div>
+		</div>
+		<div class="banner">
+			<a href=""></a>
+		</div>
+		<div class="main-text">
+			<h1>Здравствуйте, Елена!</h1>
+			<p>Помните, как в детстве вы радовались маленьким сюрпризам и подаркам в предновогоднюю пору? К сожалению, чем старше мы становимся, тем меньше мы ждем волшебства и меньше улыбаемся по пустякам. Команда <a href="http://lady-xl.ru"><span class="red-text">«Бутика Полной Моды»</span></a> решила вернуть вашу веру в чудеса.</p>
+			<p>Мы знаем, что многим из вас нравится Стас Михайлов. Его песни трогают, окутывают нежностью и проникают в самое сердце. Хотели бы вы попасть на его концерт? Мы решили разыграть три билета в VIP-партер на концерт
+			в Москве, который состоится 17 декабря.</p>
+		</div>
+		<div class="conditions">
+			<h1>Как получить билет</h1>
+			<p>Чтобы принять участие в розыгрыше, нужно совершить всего три шага:</p>
+			<div class="icons">
+				<div class="icon">
+					<div class="img-set">
+						<img src="images/01.png" alt="">
+						<img class="arrow" src="images/arrow.png" alt="">
+					</div>
+					<p>Сделать заказ<br>до 23 ноября</p>
+				</div>
+				<div class="icon">
+					<div class="img-set">
+						<img src="images/02.png" alt="">
+						<img class="arrow" src="images/arrow.png" alt="">
+					</div>	
+					<p>В комментариях<br>к заказу рассказать,<br>почему именно вы<br>должныполучить билет</p>
+				</div>
+				<div class="icon">
+					<img src="images/03.png" alt="">
+					<p>Ожидать результатов<br> конкурса, которые мы<br>объявим в письме<br>1 декабря</p>
+				</div>
+			</div>
+			<div class="button">
+				<button id="btn">Сделать заказ и выиграть билет</button>
+			</div>
+		</div>
+		<div class="text-grid">
+			<h1>В чем выйти в свет?</h1>
+			<p>Практически у каждой женщины в жизни бывают такие моменты, когда просто не знаешь, что надеть. Несмотря на знание дресс-кода, все ваши фантазии и предположения, образ просто не складывается. Особенно это касается сборов на какие-то важные мероприятия, такие как концерт любимого исполнителя или театральное представление. Команда <a href="http://lady-xl.ru"><span class="red-text">«Бутика Полной Моды»</span></a> подобрала для вас несколько образов для особого случая.
+			</p>
+		</div>
+		<div class="grid">
+			<div>
+				<a href="http://lady-xl.ru/product_18541.html"><img src="images/1.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>2590 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_255.html"><img src="images/2.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>2880 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_7857.html"><img src="images/3.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>2000 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_8101.html"><img src="images/4.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>3360 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_8461.html"><img src="images/5.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>3300 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_5734.html"><img src="images/6.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>3600 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_21161.html"><img src="images/7.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>3950 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_17497.html"><img src="images/8.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>4190 руб</p>
+				<button>Заказать</button>
+			</div>
+			<div>
+				<a href="http://lady-xl.ru/product_21157.html"><img src="images/9.jpg" alt=""></a>
+				<p class="underline">Платье</p>
+				<p>5130 руб</p>
+				<button>Заказать</button>
+			</div>
+			<h4 class="red-text"><a href="http://lady-xl.ru/">Подобрать платье для особого случая >></a></h4>
+		</div>
+		<div class="categorys">
+			<p>Вы всегда можете обратиться за помощью к нашим специалистам, если возникнут вопросы при подборе одежды в <a href="http://lady-xl.ru"><span class="red-text">«Бутикe Полной Моды»</span></a>.
+			</p>
+			<div class="box box1">
+				<a href="http://lady-xl.ru/category_3.html">
+					<h1>Юбки</h1>
+					<p>Придайте образу женственность</p>
+					<button>Добавить изюминку</button>
+				</a>
+			</div>
+			<div class="box box2">
+				<a href="http://lady-xl.ru/category_6.html">
+					<h1>Жакеты</h1>
+					<p>Будьте неотразимы</p>
+					<button>Подобрать</button>
+				</a>
+			</div>
+			<div class="box box3">
+				<a href="http://lady-xl.ru/category_23.html">
+					<h1>Пальто</h1>
+					<p>Стильно и комфортно<br>в любую погоду</p>
+					<button>Преобразиться</button>
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<h3>Оставайтесь с нами!</h3>
+		<div class="social">
+			<div class=""><a href="https://vk.com/club56791517"><img src="images/vk.png" alt=""></a></div>
+			<div class=""><a href="https://ok.ru/butikpolnoimodi"><img src="images/od.png" alt=""></a></div>
+			<div class=""><a href="https://www.instagram.com/lady_xl.ru/"><img src="images/ins.png" alt=""></a></div>
+			<div class=""><a href="https://www.youtube.com/channel/UCErtpL4MzRVPDiNku1jhSfw"><img src="images/youtube.png" alt=""></a></div>
+		</div>
+		<p>Вы получили это письмо, так как  подписаны на рассылку <a href=""><span class="red-text">«Бутика Полной Моды»</span></a>. Если вы больше не хотите получать письма от нашей компании, можно отписаться. </p>
+	</footer>
+</body>
+</html>

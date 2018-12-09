@@ -1,0 +1,82 @@
+%!Adobe-FontList 1.14
+%Locale:0x419
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\quizapro.css
+FileModTime:1487643348
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:QuizaPro-Italic
+FamilyName:Quiza Pro
+StyleName:Italic
+FullName:Quiza Pro Italic
+MenuName:Quiza Pro
+StyleBits:1
+FamilyNameNative:
+StyleNameNative:Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproitalic.ttf
+DataFormat:sfntData
+FileLength:47960
+FileModTime:1487643300
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproitalic.woff
+FileModTime:1487643300
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproitalic.woff2
+FileModTime:1487643302
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:QuizaPro-Regular
+FamilyName:Quiza Pro
+StyleName:Regular
+FullName:Quiza Pro Regular
+MenuName:Quiza Pro
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproregular.ttf
+DataFormat:sfntData
+FileLength:43536
+FileModTime:1487643326
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproregular.woff
+FileModTime:1487643326
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\Desktop\ПРОЕКТЫ\Тестовые задания\email\Out of cloud\Font\Quizaproregular.woff2
+FileModTime:1487643328
+%EndFont
+
